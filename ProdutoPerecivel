@@ -1,0 +1,28 @@
+import java.time.LocalDate;
+
+public class ProdutoPerecivel extends Produto {
+
+    private LocalDate dataValidade;
+    private double temperaturaArmazenamento;
+
+    public void setDataValidade(LocalDate dataValidade) {
+        this.dataValidade = dataValidade;
+    }
+
+    public void setTemperaturaArmazenamento(double temperaturaArmazenamento) {
+        this.temperaturaArmazenamento = temperaturaArmazenamento;
+    }
+
+    public LocalDate getDataValidade() {
+        return dataValidade;
+    }
+
+    public double getTemperaturaArmazenamento() {
+        return temperaturaArmazenamento;
+    }
+
+    public boolean verificarTemperatura(double temperaturaAtual) {
+        return temperaturaAtual <= temperaturaArmazenamento;
+     }
+    }
+
