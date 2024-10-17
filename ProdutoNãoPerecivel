@@ -1,0 +1,15 @@
+public class ProdutoNãoPerecivel extends Produto{
+
+    private int prazoGarantia;
+
+    private String categoria;
+
+    public int getPrazoGarantia() { return prazoGarantia;}
+    public void setCategoria(String categoria) { this.categoria = categoria;}
+    public String getCategoria() { return categoria;}
+
+    public boolean verificarGarantia(int mesesDeUso) {
+        return mesesDeUso <= prazoGarantia;
+    }
+
+}
